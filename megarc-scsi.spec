@@ -1,7 +1,7 @@
 Summary:	LSI Logic MegaRAID Linux MegaRC
 Name:		megarc-scsi
 Version:	1.11
-Release:	1
+Release:	2
 License:	LSI
 Group:		Base
 Source0:	http://www.lsi.com/files/support/rsa/utilities/megaconf/ut_linux_megarc_%{version}.zip
@@ -37,7 +37,7 @@ Tool to control MegaRAID controllers:
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sbindir}
 
-install megarc.bin $RPM_BUILD_ROOT%{_sbindir}/megarc-scsi
+install megarc.bin $RPM_BUILD_ROOT%{_sbindir}/megarc
 
 %clean
 rm -rf $RPM_BUILD_ROOT

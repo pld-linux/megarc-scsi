@@ -1,4 +1,5 @@
-Summary:	LSI Logic MegaRAID Linux MegaRC
+Summary:	LSI Logic MegaRAID Linux MegaRC utility
+Summary(pl.UTF-8):	Linuksowe narzędzie MegaRC dla macierzy LSI Logic MegaRAID
 Name:		megarc-scsi
 Version:	1.11
 Release:	2
@@ -15,7 +16,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Tool to control MegaRAID controllers:
+- MegaRAID SCSI 320-0
+- MegaRAID SCSI 320-1
+- MegaRAID SCSI 320-2
+- MegaRAID SCSI 320-0X
+- MegaRAID SCSI 320-2X
+- MegaRAID SCSI 320-4X
+- MegaRAID SCSI 320-2E
+- MegaRAID SATA 150-4
+- MegaRAID SATA 150-6
+- MegaRAID SATA 300-4x
+- MegaRAID SATA 300-8x
 
+%description -l pl.UTF-8
+Narzędzie do sterowania kontrolerami MegaRAID:
 - MegaRAID SCSI 320-0
 - MegaRAID SCSI 320-1
 - MegaRAID SCSI 320-2
@@ -31,8 +45,6 @@ Tool to control MegaRAID controllers:
 %prep
 %setup -q -c
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sbindir}
@@ -45,4 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc megarc *.doc *.txt
-%attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) %{_sbindir}/megarc

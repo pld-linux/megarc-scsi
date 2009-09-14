@@ -13,6 +13,7 @@ ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir		/sbin
+%define		_enable_debug_packages	0
 
 %description
 Tool to control MegaRAID controllers:
